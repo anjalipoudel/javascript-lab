@@ -1,0 +1,31 @@
+<html>
+
+<head>
+  <title>Sum of Numbers</title>
+</head>
+
+<body>
+  <h1>Sum</h1>
+  <form>
+    value1<input type="text" id="txtv1"><br>
+    value2<input type="text" id="txtv2"><br>
+    value3<input type="text" id="txtv3"><br>
+    value4<input type="text" id="txtv4"><br>
+    <input type="button" value="ADD" id="btnAdd" onclick="sum()"><br>
+    Result<input type="text" id="txtResult">
+
+  </form>
+</body>
+<script>
+  function sum() {
+    var a=[];
+    a[0]= Number(document.getElementById("txtv1").value);
+     a[1]= Number(document.getElementById("txtv2").value);
+      a[2]= Number(document.getElementById("txtv3").value);
+   a[3] = Number(document.getElementById("txtv4").value);
+    var sum = a[0]+a[1]+a[2]+a[3];
+   alert ("sum is" + sum)
+  }
+</script>
+
+</html>

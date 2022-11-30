@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Sum of Numbers</title>
+    </head>
+
+<body>
+    <h1>Sum</h1>
+    <form>
+        value1<input type="text" id="txtv1"><br>
+        value2<input type="text" id="txtv2"><br>
+      value3<input type="text" id="txtv3"><br>
+        <input type="button" value="interest" id="button" onclick=" simple_interest()"><br>
+        Result<input type="text" id="interest">
+
+    </form>
+</body>
+<script>
+    function  simple_interest()
+    {
+        var p=document.getElementById("txtv1").value;
+        var t=document.getElementById("txtv2").value;
+      var r= document.getElementById("txtv3").value;
+        var c=(Number(p)*Number(t)*Number(r))/100;
+        document.getElementById("interest").value=c;
+    }
+</script>
+</html>
+

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Sum of Numbers</title>
+    </head>
+
+<body>
+    <h1>Sum</h1>
+    <form>
+        value1<input type="text" id="txtv1"><br>
+        value2<input type="text" id="txtv2"><br>
+        <input type="button" value="ADD" id="btnAdd" onclick="sum()"><br>
+        Result<input type="text" id="txtResult">
+
+    </form>
+</body>
+<script>
+    function sum()
+    {
+        var a=document.getElementById("txtv1").value;
+        var b=document.getElementById("txtv2").value;
+        var c=Number(a)+Number(b);
+        document.getElementById("txtResult").value=c;
+    }
+</script>
+</html>
