@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samipa Sapkota</title>
+</head>
+<body>
+    <h3>object in java script</h3>
+
+    <script>
+        var person = {
+            "Name": "samipa sapkota",
+            "Age": " 23",
+            "phone": "98123456",
+            "Email": "samipa@gmail.com",
+            GetAge: function () {
+            return this.Age;
+        }
+        };
+       
+        alert (person["Name"]);
+        person["Gender"] = "female";
+        alert (person["Gender"]);
+        var age = person.GetAge();
+        alert (age);
+    </script>
+</body>
+</html>

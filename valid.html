@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANJALI</title>
+</head>
+
+<body>
+    <form name="myform" style="display: flex; flex-direction: column; margin-left: 40%;margin-right: 40%; ">
+        <label for="Name:">
+            Name:
+        </label>
+        <input type="text" id="name" placeholder="Name" />
+        <label for="Email:">
+            Email:
+        </label>
+        <input type="text" id="email" placeholder="abc@gmail.com" />
+        <label for="Pawssord:">
+            Pawssord:
+        </label>
+        <input type="text" id="password" placeholder="password">
+        <label for="confrim Pawssord:">
+            Confrim Pawssord:
+        </label>
+        <input type="text" id="confrim-password" placeholder="confrim password">
+       
+
+        <label for="Salary:">Salary:
+        </label>
+        <input type="number" id="salary" placeholder="...." />
+
+
+       <div> <p style="font-size: medium;">Select Course</p>
+        
+        <input type="radio" id="csit" name="it" value="Bsc.CSIT">
+        <label for="csit">Bsc.CSIT</label><br>
+        <input type="radio" id="bca" name="it" value="CSS">
+        <label for="bca">BCA</label><br>
+        <input type="radio" id="bim" name="it" value="JavaScript">
+        <label for="bim">BIM</label>
+        <br><br>
+ 
+        <input type="checkbox" id="agree" name="agree" >
+        <label for="agree"> Agree </label></div>
+           
+           <input type="button" value="Submit" onclick="validateEmailPassword()">
+
+    </form>
+    <script>
+
+        function validateEmailPassword() {
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirm_password = document.getElementById("confrim-password").value;
+            const atpos = email.indexOf("@");
+            const dotpos = email.indexOf(".");
+           
+            if (atpos < 1 || (dotpos - atpos < 2)) {
+                console.log(email);
+                console.log(dotpos,atpos);
+                alert("Please enter correct email address");
+                document.myform.email.focus();
+            }
+
+
+            if (password != confirm_password) {
+                alert("Please enter correct password");
+                document.myform.password.focus();
+
+            }
+            else{
+            alert("true");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Form</title>
+</head>
+<body>
+   <div style="width: 50%; background-color: #efeff5;  height:1100px; margin: auto; ">
+      <div class="appheader" style=" display:flex; justify-content:center; flex-direction:column margin-auto; ">
+         <div class="heading">
+            <h3>INDRENI COLLEGE</h3>
+            <p>Regrestation Form</p>
+            <p>056-525246</p>
+         </div>
+      </div>
+      <form name="myform" style="display: flex; flex-direction: column; margin-left :100px;">
+         Name:<input type="text" style="width: 300px; height: 25px; ">
+         Gender:<input type="text" style="width: 300px; height: 25px;">
+         Date of Birth:<input type="text" style="width: 300px; height: 25px; ">
+         Phone Number:<input type="text" style="width: 300px; height: 25px;">
+         Local Address:<textarea type="text" style="width: 300px; height: 25px;"></textarea>
+         Residential Address: <textarea type="text" style="width: 300px; height: 25px;"></textarea>
+         Last School Attendence Details:<input type="text" style="width: 300px; height: 25px;">
+         <label for="Email:">
+            Email:
+        </label>
+        <input type="text" id="email" placeholder="abc@gmail.com" style="width: 300px; height: 25px;" />
+        <label for="Pawssord:">
+            Pawssord:
+        </label>
+        <input type="text" id="password" placeholder="password"  style="width: 300px; height: 25px;">
+        <label for="confrim Pawssord:">
+            Confrim Pawssord:
+        </label>
+        <input type="text" id="confrim-password" placeholder="confrim password"  style="width: 300px; height: 25px;">
+       
+      </form>
+      <div style="display: flex; flex-direction: column; margin-left :100px;">
+         <p style="font-size: medium;">I Would Like To Register In following Course</p>
+         <form>
+            <input type="radio" id="csit" name="it" value="Bsc.CSIT">
+            <label for="csit">Bsc.CSIT</label><br>
+            <input type="radio" id="bca" name="it" value="CSS">
+            <label for="bca">BCA</label><br>
+            <input type="radio" id="bim" name="it" value="JavaScript">
+            <label for="bim">BIM</label>
+         </form>
+         <p style="font-size: medium;">How Do You Know About Us?</p>
+         <form>
+            <input type="radio" id="csit" name="it" value="Bsc.CSIT">
+            <label for="csit">Newspaper</label><br>
+            <input type="radio" id="bca" name="it" value="CSS">
+            <label for="bca">Website</label><br>
+            <input type="radio" id="bim" name="it" value="JavaScript">
+            <label for="bim">Friend</label>
+         </form>
+         <p style="font-size: medium;">I Aggre To Pay School Fee In Advanced Day.</p>
+         <form>
+            <input type="radio" id="csit" name="it" value="Bsc.CSIT">
+            <label for="csit">Cash</label><br>
+            <input type="radio" id="bca" name="it" value="CSS">
+            <label for="bca">Card</label><br>
+            <input type="radio" id="bim" name="it" value="JavaScript">
+            <label for="bim">Check</label>
+            <br><br>
+            <input type="submit" value="Submit">
+         </form>
+      </div>
+   </div>
+</body>
+<script>
+
+   function validateEmailPassword() {
+       var email = document.getElementById("email").value;
+       var password = document.getElementById("password").value;
+       var confirm_password = document.getElementById("confrim-password").value;
+       const atpos = email.indexOf("@");
+       const dotpos = email.indexOf(".");
+      
+       if (atpos < 1 || (dotpos - atpos < 2)) {
+           console.log(email);
+           console.log(dotpos,atpos);
+           alert("Please enter correct email address");
+           document.myform.email.focus();
+       }
+
+
+       if (password != confirm_password) {
+           alert("Please enter correct password");
+           document.myform.password.focus();
+
+       }
+       else{
+       alert("true");
+       }
+   }
+
+</script>
+</html>

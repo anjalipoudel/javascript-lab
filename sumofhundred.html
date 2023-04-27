@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            Sum of array
+        </title>
+    </head>
+    <body>
+        <h1>
+            Sum of 100 numbers
+        </h1>
+        <form>
+            <input type="button" value="Sum of numbers" id="btnshow" onclick="show()">
+            </form>
+        </body>
+    <script>
+        function show()
+        {
+          var i, sum=0,n;
+          for(i=1;i<=100;i++)
+          {
+            n=prompt("Enter No.");
+            sum=sum+Number(n)
+          }
+          alert("sum is" + sum);
+        }
+    </script>
+</html>
